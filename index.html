@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Form Test</title>
+</head>
+<body>
+    <form>
+        <select name="" id="mySelect_email" style="margin-right: 20px;">
+            <option value=""></option>
+            <option value="com">com</option>
+            <option value="edu">edu</option>
+            <option value="ru">ru</option>
+            <option value="org">org</option>
+            <option value="cc">cc</option>
+            <option value="de">de</option>
+            <option value="net">net</option>
+            <option value="int">int</option>
+            <option value="cn">int</option>
+            <option value="gov">gov</option>
+            <option value="tv">tv</option>
+            <option value="uk">uk</option>
+            <option value="au">au</option>
+            <option value="ru">ru</option>
+            <option value="jp">jp</option>
+            <option value="us">us</option>
+        </select>
+        <select name="" id="mySelect" style="margin-right: 20px;">
+            <option value=""></option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <input id="search" type="text" placeholder="Search">
+    </form>
+    <button type="button" id="data" class="data">Add array Data</button>
+    <button type="button" id="btn-clear-table" class="btn-clear-table">Clear All</button>
+    <span style="padding-left: 20px">Всього:</span>
+    <table id="table">
+        <thead>
+        <tr>
+            <th class="sort-order" data-column-name="id">ID</th>
+            <th class="sort-order" data-column-name="first_name">First Name</th>
+            <th class="sort-order" data-column-name="last_name">Last Name</th>
+            <th class="sort-order" data-column-name="email">Email</th>
+            <th class="sort-order" data-column-name="gander">Gander</th>
+            <th class="sort-order" data-column-name="ip_address">IP address</th>
+            <th>Delete Row</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="tr">
+            <td>0</td>
+            <td>Peter</td>
+            <td>Parker</td>
+            <td>peterparker@mail.com</td>
+            <td>Male</td>
+            <td>66.166.29.219</td>
+            <td><button id="clear-row" class="clear-row">Delete Row</button></td>
+         </tr>
+        </tbody>
+    </table>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
