@@ -21,7 +21,7 @@ $(document).ready(function(){
         deleteRow(e.target);
     });
 
-    $(".sort-order").click(sortClick);
+    $(".sort-order").click(sortClick());
 
     $("#search").keyup(function () {
         search_table($(this).val());
@@ -62,11 +62,23 @@ $(document).ready(function(){
     }
 
     function sortClick() {
-        const columnName = $(this).data("column-name");
-        const comparator = getComparator(columnName);
-        data.sort(comparator);
-        clearTable();
-        addRows(data);
+        let toggleSort = false;
+        function sort() {
+            console.log(event);
+            console.log($(this).attr("class").split(' '));
+            if (toggleSort) {
+                $(this).find( "i" ).toggleClass('fas fa-caret-down');
+            } else {
+                $(this).find( "i" ).toggleClass('fas fa-caret-up');
+            }
+            const columnName = $(this).data("column-name");
+            const comparator = getComparator(columnName, toggleSort);
+            data.sort(comparator);
+            clearTable();
+            addRows(data);
+            toggleSort = !toggleSort;
+        }
+        return sort;
     };
 
 
@@ -103,8 +115,11 @@ $(document).ready(function(){
         return  data.filter( element => element.gender === gander );
     };
 
-    function getComparator(columnName) {
-        return function(a, b){ return a[columnName] > b[columnName] ? 1 : a[columnName] < b[columnName] ? -1 : 0;}
+    function getComparator(columnName, order) {
+        let asc = order ? 1 : -1;
+        let desc = !order ? 1 : -1;
+        return function(a, b){ return a[columnName] > b[columnName] ? asc : a[columnName] < b[columnName] ? desc : 0;}
     };
 
 });
+

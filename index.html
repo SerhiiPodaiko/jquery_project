@@ -9,27 +9,14 @@
     <link rel="stylesheet" href="css/style.css">
 
     <title>Form Test</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.9.0/js/all.js" data-auto-replace-svg="nest"></script>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
     <form>
         <select name="" id="mySelect_email" style="margin-right: 20px;">
-            <option value=""></option>
-            <option value="com">com</option>
-            <option value="edu">edu</option>
-            <option value="ru">ru</option>
-            <option value="org">org</option>
-            <option value="cc">cc</option>
-            <option value="de">de</option>
-            <option value="net">net</option>
-            <option value="int">int</option>
-            <option value="cn">int</option>
-            <option value="gov">gov</option>
-            <option value="tv">tv</option>
-            <option value="uk">uk</option>
-            <option value="au">au</option>
-            <option value="ru">ru</option>
-            <option value="jp">jp</option>
-            <option value="us">us</option>
         </select>
         <select name="" id="mySelect" style="margin-right: 20px;">
             <option value=""></option>
@@ -44,12 +31,12 @@
     <table id="table">
         <thead>
         <tr>
-            <th class="sort-order" data-column-name="id">ID</th>
-            <th class="sort-order" data-column-name="first_name">First Name</th>
-            <th class="sort-order" data-column-name="last_name">Last Name</th>
-            <th class="sort-order" data-column-name="email">Email</th>
-            <th class="sort-order" data-column-name="gander">Gander</th>
-            <th class="sort-order" data-column-name="ip_address">IP address</th>
+            <th class="sort-order" data-column-name="id">ID <i class="fas fa-caret-down"></i></th>
+            <th class="sort-order" data-column-name="first_name">First Name <i class="fas fa-caret-down"></i></th>
+            <th class="sort-order" data-column-name="last_name">Last Name <i class="fas fa-caret-down"></i></th>
+            <th class="sort-order" data-column-name="email">Email <i class="fas fa-caret-down"></i></th>
+            <th class="sort-order" data-column-name="gander">Gander <i class="fas fa-caret-down"></i></th>
+            <th class="sort-order" data-column-name="ip_address">IP address <i class="fas fa-caret-down"></i></th>
             <th>Delete Row</th>
         </tr>
         </thead>
@@ -66,8 +53,6 @@
         </tbody>
     </table>
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/script.js"></script>
+
 </body>
 </html>
